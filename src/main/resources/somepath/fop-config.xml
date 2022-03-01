@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<fop>
+  <renderers>
+    <renderer mime="application/pdf">
+      <fonts>
+        <font kerning="yes" embed-url="classpath:/somepath/DejaVuSans-Regular.ttf">
+          <font-triplet name="DejaVuSans" style="normal" weight="normal"/>
+        </font>
+      </fonts>
+    </renderer>
+  </renderers>
+</fop>

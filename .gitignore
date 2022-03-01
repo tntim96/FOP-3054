@@ -1,0 +1,6 @@
+### JetBrains IntelliJ
+*.iml
+.idea/
+
+### Maven
+target/
