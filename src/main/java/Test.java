@@ -3,6 +3,7 @@ import org.apache.fop.apps.Fop;
 import org.apache.fop.apps.FopFactory;
 import org.apache.fop.apps.FopFactoryBuilder;
 import org.apache.fop.apps.MimeConstants;
+import org.apache.fop.apps.io.InternalResourceResolver;
 import org.apache.fop.apps.io.ResourceResolverFactory;
 import org.apache.fop.configuration.Configuration;
 import org.apache.fop.configuration.ConfigurationException;
@@ -62,6 +63,8 @@ public class Test {
       FopFactory fopFactory = fopFactoryBuilder.build();
       fopFactory.getFontManager().disableFontCache();
       // configure fopFactory as desired
+      InternalResourceResolver internalResourceResolver = ResourceResolverFactory.createInternalResourceResolver(URI.create("https://www.fop.com.au/"), rr);
+      fopFactory.getFontManager().setResourceResolver(internalResourceResolver);
 
       FOUserAgent foUserAgent = fopFactory.newFOUserAgent();
       // configure foUserAgent as desired
